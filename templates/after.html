@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction</title>
+</head>
+
+<style>
+body {
+    background-color: #92a8d1;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+a {
+    font-size: 20px;
+}
+</style>
+
+<body>
+    <h2 style="text-align: center;">PREDICTION:</h2>
+
+    {%if data == 0%}
+    <h1>You may not get heart failure!</h1>
+    <img src='static\heartFailure\healthy-heart.jpg' alt="Healthy-heart" width="600" height="500">
+
+    {%else%}
+    <h1>You may get heart failure!</h1>
+    <img src='static\heartFailure\heart-failure.jpg' alt="Heart-failure" width="600" height="500">
+    
+    {%endif%}
+    <br><br>
+    <a href='/'>Go back to home page</a>
+
+</body>
+</html>

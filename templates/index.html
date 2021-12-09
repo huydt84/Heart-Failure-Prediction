@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+</head>
+
+<style>
+body {
+    background-color: #92a8d1;
+}
+table, th, td {
+    font-size: 20px;
+    border:1px solid black;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.tb {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+.center {
+    margin: auto;
+    text-align: center;
+}
+button {
+    width: 10%;
+    border-radius: 3px;
+    padding: 10px;
+    background-color:bisque;
+}
+
+</style>
+
+<body>
+
+    <h1 style="text-align: center;">HEART DISEASE DETECTION</h1>
+
+    <form action="{{ url_for('benhtim') }}" method="POST">
+    <div class="tb">
+    <table id="tb1">
+        <tr>
+            <th>Age: </th>
+            <td><input type="number", name='age', placeholder="Enter age" required></td>
+        </tr>
+        <tr>
+            <th>Gender: </th>
+            <td>
+                <input type="radio" name="gender" value="1" required>Male<br>
+                <input type="radio" name="gender" value="0">Female    
+            </td>
+        </tr>
+        <tr>
+            <th>Chest Pain Type: </th>
+            <td>
+                <input type="radio" name="cpt" value="0" required>ASY
+                <input type="radio" name="cpt" value="1">ATA<br>
+                <input type="radio" name="cpt" value="2">NAP
+                <input type="radio" name="cpt" value="3">TA<br>
+            </td>
+        </tr>
+        <tr>
+            <th>Resting Blood Pressure: </th>
+            <td><input type="number", name='restingbp', placeholder="Enter rbp" required></td>
+        </tr>
+        <tr>
+            <th>Cholesterol: </th>
+            <td><input type="number", name='cholesterol', placeholder="Enter cholesterol" required></td>
+        </tr>
+        <tr>
+            <th>Fasting Blood Sugar: </th>
+            <td>
+                <input type="radio" name="fbs", value="1" required>Yes<br>
+                <input type="radio" name="fbs" value="0">No<br>
+            </td>
+        </tr>
+        <tr>
+            <th>Resting Electrocardiogram: </th>
+            <td>
+                <input type="radio" name="restingecg" value="0" required>LVH<br>
+                <input type="radio" name="restingecg" value="1">Normal<br>
+                <input type="radio" name="restingecg" value="2">ST<br>
+            </td>
+        </tr>
+        <tr>
+            <th>Maximum heart rate: </th>
+            <td><input type="number" name='maxhr' placeholder="Enter max heart rate" required></td>
+        </tr>
+        <tr>
+            <th>Angina when exercises: </th>
+            <td>
+                <input type="radio" name="exAngina" value="1" required>Yes<br>
+                <input type="radio" name="exAngina" value="0">No<br>
+            </td>
+        </tr>
+        <tr>
+            <th>Old peak: </th>
+            <td><input type="text" name='oldpeak' placeholder="Enter old peak" required></td>
+        </tr>
+        <tr>
+            <th>ST/Heart rate slope: </th>
+            <td>
+                <input type="radio" name="stslope", value="0" required>Down<br>
+                <input type="radio" name="stslope" value="1">Flat<br>
+                <input type="radio" name="stslope", value="2">Up<br>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <div class="center"><button type="submit">Submit</button></div>
+    </form>
+      
+</body>
+</html>
